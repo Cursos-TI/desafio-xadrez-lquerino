@@ -28,5 +28,45 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
+    char bisp[8] = "Bispo", tor[8] = "Torre", rai[8] = "Rainha";
+    int mov1 = 1, mov2 = 1, mov3 = 1, mov5 = 5, mov8 = 8, ordm1 = 1, ordm2 = 1, ordm3 = 1;
+
+    // Exibição da quantidade de movimentos por peça
+
+    printf("Cada peça poderá se movimentar seguindo as orientações: \n\n"); 
+
+    printf("%s se movimenta %d vezes\n", bisp, mov5);
+    printf("%s se movimenta %d vezes\n", tor, mov5);
+    printf("%s se movimenta %d vezes\n", rai, mov8);
+
+    printf("\n\nIniciando movimentações.... \n\n");
+
+    // Locação de repetições para movimento de cada peça
+
+    printf("\n\n Movimentação do Bispo: \n\n");
+    
+    while (mov1 <= 5)
+    {
+        printf("Movimento %d: %s se movimentou para a cima!\n", ordm1, bisp);
+        printf("Movimento %d: %s se movimentou para a direita!\n", ordm1, bisp);
+        mov1 ++;
+        ordm1 ++;
+    }
+
+    printf("\n\n Movimentação da Torre: \n\n");
+
+    do {
+        printf("Movimento %d: %s se movimentou para a direita!\n", ordm2, tor);
+        mov2 ++;
+        ordm2 ++;
+
+    } while (mov2 <= 5);
+
+    printf("\n\n Movimentação da Rainha: \n\n");
+
+    for (mov3 = 1, ordm3 = 1; mov3 <= 8; mov3++, ordm3++){
+         printf("Movimento %d: %s se movimentou para a esquerda!\n", ordm3, rai);
+    }
+
     return 0;
 }
